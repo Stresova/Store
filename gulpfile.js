@@ -1,11 +1,11 @@
 // подключение пакетов
 const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer'); // проставляет префиксы
+const autoprefixer = require('gulp-autoprefixer'); // проставляет вендорные префиксы
 const rename = require('gulp-rename'); // переименовывает файлы
 const minifycss = require('gulp-cssmin'); // минифицирует css
-const tinypg = require('gulp-tinypng');
-const spritesmith = require('gulp.spritesmith');
-const merge = require('merge-stream');
+const tinypg = require('gulp-tinypng'); // сжимает картинки
+const spritesmith = require('gulp.spritesmith'); // генерирует спрайты
+const merge = require('merge-stream'); // объединяет спрайты
 
 gulp.task('css', function(){
     return gulp.src("src/css/**/*.css")
